@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<div id="app">
+    <input v-model="message" />
+    <input type="submit" @click="add" />
+    <p v-for="m in messages">{{m.text}} <button @click="remove($index)"> X</button></p>
+</div>
+<script src="build/bundle.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,20 @@
+{
+  "name": "webpack-vue-coffeescript",
+  "version": "0.0.1",
+  "description": "none",
+  "repository": "none",
+  "license": "MIT",
+  "dependencies": {
+  },
+  "scripts": {
+    "build": "webpack && npm run uglify",
+    "uglify":"uglifyjs --compress -m  --output ./build/bundle.min.js -- ./build/bundle.js "
+  },
+  "devDependencies": {
+    "uglify-js": "^2.6.1",
+    "coffee-loader": "^0.7.2",
+    "coffee-script": "^1.10.0",
+    "vue": "^1.0.13",
+    "webpack": "^1.12.9"
+  }
+}
