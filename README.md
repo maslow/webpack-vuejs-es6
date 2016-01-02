@@ -5,8 +5,6 @@ Introduction
 
     Vue.js  ->  A beautiful & high performance library for building interactive web interfaces. （View-Model of MVVM)
 
-    CoffeeScript  ->   Amazing code style with syntax sugar!
-    
 
 Requirements
 ------------
@@ -31,6 +29,11 @@ Building
 
 ```
 // build the project
-npm run build  
+npm run build
+
+// running
+npm run dev
+
+// then open http://localhost:8080 in your browser (like chrome ie etc.)
 
 ```
