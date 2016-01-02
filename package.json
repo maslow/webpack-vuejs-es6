@@ -6,6 +6,7 @@
   "license": "MIT",
   "dependencies": {},
   "scripts": {
+    "dev": "webpack-dev-server --inline --hot",
     "build": "webpack && npm run uglify",
     "uglify": "uglifyjs --compress -m  --output ./build/bundle.min.js -- ./build/bundle.js "
   },
@@ -15,8 +16,6 @@
     "babel-plugin-transform-runtime": "^6.3.13",
     "babel-preset-es2015": "^6.3.13",
     "bootstrap": "^3.3.6",
-    "coffee-loader": "^0.7.2",
-    "coffee-script": "^1.10.0",
     "css-loader": "^0.23.1",
     "file-loader": "^0.8.5",
     "font-awesome": "^4.5.0",
@@ -27,6 +26,7 @@
     "vue-hot-reload-api": "^1.2.2",
     "vue-html-loader": "^1.1.0",
     "vue-loader": "^7.5.1",
-    "webpack": "^1.12.9"
+    "webpack": "^1.12.9",
+    "webpack-dev-server": "^1.14.0"
   }
 }

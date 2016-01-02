@@ -1,8 +1,9 @@
 <template>
-  <div>Page One Ha</div>
+  <div>Page One</div>
 </template>
 
-<script lang="babel">
-module.exports = {
+<script>
+export default {
+
 }
 </script>

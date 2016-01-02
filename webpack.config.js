@@ -1,5 +1,5 @@
 module.exports = {
-    entry: "./scripts/app.coffee",
+    entry: "./scripts/main.js",
     output: {
         path: __dirname + '/build',
         publicPath: 'build/',
@@ -8,7 +8,7 @@ module.exports = {
     module: {
         loaders: [
             {test: /\.css$/, loader: "style!css"},
-            {test: /\.coffee$/, exclude: /node_modules/, loader: "coffee"},
+            {test: /\.js$/, exclude: /node_modules/, loader: "babel"},
             {test: /\.vue$/, exclude: /node_modules/, loader: "vue"},
             {
                 test: /\.(gif|jpg|png|woff|svg|eot|ttf)\??.*$/,
@@ -16,7 +16,7 @@ module.exports = {
             }
         ]
     },
-    resolve: {
-        extensions: ['', '.js', '.coffee']
+    babel: {
+        presets: ['es2015']
     }
 };
