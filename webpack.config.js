@@ -9,6 +9,7 @@ module.exports = {
         loaders: [
             {test: /\.css$/, loader: "style!css"},
             {test: /\.coffee$/, exclude: /node_modules/, loader: "coffee"},
+            {test: /\.vue$/, exclude: /node_modules/, loader: "vue"},
             {
                 test: /\.(gif|jpg|png|woff|svg|eot|ttf)\??.*$/,
                 loader: 'url-loader?limit=8192&name=assets/[name].[ext]?[hash]'

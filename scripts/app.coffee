@@ -1,12 +1,23 @@
+require '../node_modules/bootstrap/dist/css/bootstrap.css'
+
 Vue = require 'vue'
+
+PageOne = require './components/PageOne.vue'
+PageTow = require './components/PageTwo.vue'
 
 new Vue
   el: '#app'
   data:
-    messages: []
-    message: ''
+    pages: [
+      {name: 'page-one', title: 'Page One'}
+      {name: 'page-two', title: 'Page Tow'}
+    ]
+    page:
+      name: 'page-one', title: 'Page One'
   methods:
-    add: () ->
-      @messages.push(text: @message) if @message.trim()
-      @message = ''
-    remove: (i) -> @messages.splice i, 1
+    route: (i) ->
+      @page = @pages[i]
+
+  components:
+    'page-one': PageOne
+    'page-two': PageTow

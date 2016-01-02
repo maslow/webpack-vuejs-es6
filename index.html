@@ -4,12 +4,31 @@
     <meta charset="UTF-8">
     <title></title>
 </head>
-<body>
-<div id="app">
+<body id="app">
+<div class="container" style="margin-top:50px;">
+    <div class="row">
+        <div class="col-md-4">
+            <ul class="nav nav-pills nav-stacked">
+                <li v-for="p in pages" :class="{'active': page.name === p.name}" @click="route($index)"><a>{{p.title}}</a></li>
+            </ul>
+        </div>
+        <div class="col-md-8">
+            <div class="panel panel-info">
+                <div class="panel-heading">
+                    {{page.title}}
+                </div>
+                <div class="panel-body">
+                    <component :is="page.name"></component>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--
     <input v-model="message" />
     <input type="submit" @click="add" />
     <p v-for="m in messages">{{m.text}} <button @click="remove($index)"> X</button></p>
+    -->
 </div>
-<script src="build/bundle.min.js"></script>
+<script src="build/bundle.js"></script>
 </body>
 </html>
