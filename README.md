@@ -17,7 +17,7 @@ Installation
 
 ```
 // clone source code of project
-git clone https://git.coding.net/maslow/webpack-vuejs-coffeescript.git
+git clone https://git.coding.net/maslow/webpack-vuejs.git
 
 // install dependencies of project
 cd webpack-vuejs-coffeescript

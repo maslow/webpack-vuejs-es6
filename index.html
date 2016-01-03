@@ -5,11 +5,29 @@
     <title></title>
 </head>
 <body>
+<input id="checked" type="checkbox" v-model="checked">
+<label for="checked">Open only one at a time.</label>
+
+<accordion :one-at-atime="checked">
+    <panel header="Panel #1" :is-open="true">
+        ...
+    </panel>
+    <panel header="Panel #2">
+        ...
+    </panel>
+    <panel header="Panel #3">
+        ...
+    </panel>
+    <panel header="Panel #4">
+        ...
+    </panel>
+</accordion>
 <div class="container" style="margin-top:50px;">
     <div class="row">
         <div class="col-md-4">
             <ul class="nav nav-pills nav-stacked">
-                <li v-for="p in pages" :class="{'active': page.name === p.name}" @click="route($index)"><a>{{p.title}}</a></li>
+                <li v-for="p in pages" :class="{'active': page.name === p.name}" @click="route($index)">
+                    <a>{{p.title}}</a></li>
             </ul>
         </div>
         <div class="col-md-8">
