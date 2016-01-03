@@ -4,14 +4,12 @@
   "description": "none",
   "repository": "none",
   "license": "MIT",
-  "dependencies": {
-    "vue-strap": "^1.0.3"
-  },
+  "dependencies": {},
   "scripts": {
     "dev": "webpack-dev-server --inline --hot",
     "build": "webpack && npm run uglify",
     "uglify": "uglifyjs --compress -m  --output ./build/bundle.min.js -- ./build/bundle.js ",
-    "push" : "npm run build && git add -A && git commit -m 'Auto Push.' && git push origin"
+    "push": "npm run build && git add -A && git commit -m 'Auto-pushed by npm' && git push origin"
   },
   "devDependencies": {
     "babel-core": "^6.3.26",
@@ -29,6 +27,8 @@
     "vue-hot-reload-api": "^1.2.2",
     "vue-html-loader": "^1.1.0",
     "vue-loader": "^7.5.1",
+    "vue-router": "^0.7.7",
+    "vue-strap": "^1.0.3",
     "webpack": "^1.12.9",
     "webpack-dev-server": "^1.14.0"
   }

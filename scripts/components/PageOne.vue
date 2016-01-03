@@ -1,9 +1,14 @@
 <template>
-  <div>Page One</div>
+    <panel header="Page One" :is-open="true">
+        Content of page-one
+    </panel>
 </template>
 
 <script>
-export default {
-
-}
+    import {panel} from 'vue-strap'
+    export default {
+        components: {
+            panel
+        }
+    }
 </script>
